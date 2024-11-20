@@ -25,17 +25,10 @@ day- day of the week
 
 
 
-
-
-
-
-
-
-
-
-
-myDate = new Date();
-myDay = myDate.getDay();
+let myDate = new Date();
+let myDay = myDate.getDay();
+let coffee = "";
+let today ="";
 
 switch(myDay){
 
@@ -43,8 +36,22 @@ switch(myDay){
         today = "Sunday";  
     break; 
 
+   
     case 2:
         today = "Tuesday";  
+    break; 
+
+    case 3:
+        today = "Wednesday ";  
+
+        coffee = {
+            name: "Bubble Tea", 
+            pic: "images/bubble-tea.jpg",
+            alt: "A pic of a bubble tea", 
+            color: "pink",
+            day: "Wednesday", 
+            desc: `I like me some bubble tea!`
+        };
     break; 
     
     default:
