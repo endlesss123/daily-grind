@@ -60,3 +60,4 @@ switch(myDay){
 }
 
 alert(today);
+console.log(coffee);
