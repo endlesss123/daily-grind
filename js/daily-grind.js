@@ -61,3 +61,10 @@ switch(myDay){
 
 alert(today);
 console.log(coffee);
+
+
+function coffeeTemplate(coffee){
+    return `       <p>
+    		 <img src="${coffee.pic}" alt="${coffee.alt}" id="coffee" />
+            <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>, ${coffee.desc}</p>`;
+}
