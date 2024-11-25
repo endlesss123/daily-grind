@@ -30,7 +30,27 @@ let myDay = myDate.getDay();
 let coffee = "";
 let today ="";
 
-//myDay = 3;//TEST ONLY _REMOVE THIS
+
+//use location object to access querystring (address bar)
+const queryString = window.location.search;
+    
+//output to console    
+console.log(queryString);
+    
+//separate query string parameters
+const urlParams = new URLSearchParams(queryString);
+
+if(urlParams.has("day")){//from querystring
+    myDay = urlParams.get("day");
+ }
+
+// Here's how we convert a string to an integer:
+
+myDay = parseInt(myDay);//must change to integer for switch
+
+
+//Here's a website where this is discussed: Mozilla Developer Network on parseInt()
+
 
 switch(myDay){
 
