@@ -30,14 +30,15 @@ let myDay = myDate.getDay();
 let coffee = "";
 let today ="";
 
+myDay = 3;//TEST ONLY _REMOVE THIS
+
 switch(myDay){
 
     case 0:
         today = "Sunday";  
     break; 
 
-   
-    case 2:
+     case 2:
         today = "Tuesday";  
     break; 
 
@@ -64,6 +65,8 @@ console.log(coffee);
 
 document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
 
+
+document.querySelector("html").style.backgroundColor = coffee.color;
 
 function coffeeTemplate(coffee){
     return `       <p>
