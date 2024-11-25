@@ -30,12 +30,25 @@ let myDay = myDate.getDay();
 let coffee = "";
 let today ="";
 
-myDay = 3;//TEST ONLY _REMOVE THIS
+//myDay = 3;//TEST ONLY _REMOVE THIS
 
 switch(myDay){
 
     case 0:
         today = "Sunday";  
+    break; 
+
+    case 1:
+        today = "Monday ";  
+
+        coffee = {
+            name: "Cold Brew", 
+            pic: "images/cold-brew.jpg",
+            alt: "A pic of a cold brew", 
+            color: "brown",
+            day: "Monday", 
+            desc: `For when I need a quick pick me up!`
+        };
     break; 
 
      case 2:
@@ -60,7 +73,7 @@ switch(myDay){
 
 }
 
-alert(today);
+//alert(today);
 console.log(coffee);
 
 document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
