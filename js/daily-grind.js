@@ -61,7 +61,7 @@ switch(myDay){
     break; 
 
     case 1:
-        today = "Monday ";  
+        today = "Monday";  
 
         coffee = {
             name: "Cold Brew", 
@@ -88,7 +88,7 @@ switch(myDay){
     break; 
 
     case 3:
-        today = "Wednesday ";  
+        today = "Wednesday";  
 
         coffee = {
             name: "Bubble Tea", 
@@ -101,7 +101,7 @@ switch(myDay){
     break; 
 
     case 4:
-        today = "Thursday ";  
+        today = "Thursday";  
 
         coffee = {
             name: "Frappaccino", 
