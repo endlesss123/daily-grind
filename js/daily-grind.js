@@ -47,6 +47,17 @@ switch(myDay){
 
     case 0:
         today = "Sunday";  
+
+
+        coffee = {
+            name: "Caramel Latte", 
+            pic: "images/caramel-latte.jpg",
+            alt: "A pic of a caramel latte", 
+            color: "yellow",
+            day: "Sunday", 
+            desc: `For when I want something sweet`
+        };
+
     break; 
 
     case 1:
@@ -64,6 +75,16 @@ switch(myDay){
 
      case 2:
         today = "Tuesday";  
+
+
+        coffee = {
+            name: "Drip", 
+            pic: "images/drip.jpg",
+            alt: "A pic of a drip", 
+            color: "blue",
+            day: "Tuesdat", 
+            desc: `For when I need sauce!`
+        };
     break; 
 
     case 3:
@@ -76,6 +97,45 @@ switch(myDay){
             color: "pink",
             day: "Wednesday", 
             desc: `I like me some bubble tea!`
+        };
+    break; 
+
+    case 4:
+        today = "Thursday ";  
+
+        coffee = {
+            name: "Frappaccino", 
+            pic: "images/frappaccino.jpg",
+            alt: "A pic of a frappaccino", 
+            color: "red",
+            day: "Thursday", 
+            desc: `I like me some whip cream on top!`
+        };
+    break; 
+
+    case 5:
+        today = "Friday";  
+
+        coffee = {
+            name: "Mocha", 
+            pic: "images/mocha.jpg",
+            alt: "A pic of a mocha", 
+            color: "purple",
+            day: "Friday", 
+            desc: `I like a cup of mocha!`
+        };
+    break;
+    
+    case 6:
+        today = "Saturday";  
+
+        coffee = {
+            name: "Latte", 
+            pic: "images/latte.jpg",
+            alt: "A pic of a latte", 
+            color: "green",
+            day: "Saturday", 
+            desc: `I like a small cup of latte!`
         };
     break; 
     
