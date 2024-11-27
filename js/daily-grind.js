@@ -82,7 +82,7 @@ switch(myDay){
             pic: "images/drip.jpg",
             alt: "A pic of a drip", 
             color: "blue",
-            day: "Tuesdat", 
+            day: "Tuesday", 
             desc: `For when I need sauce!`
         };
     break; 
