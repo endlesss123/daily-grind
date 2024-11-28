@@ -116,12 +116,12 @@ if(urlParams.has("day")) {
         case 6:
         today = "Saturday";  
         coffee = {
-            name: "Latte", 
-            pic: "images/latte.jpg",
-            alt: "A pic of a latte", 
+            name: "Frappaccino", 
+            pic: "images/frappaccino.jpg",
+            alt: "A pic of a frappaccino", 
             color: "green",
             day: "Saturday", 
-            desc: `I like a small cup of latte!`
+            desc: `I like a small cup of frappaccino!`
         };
         break; 
     
