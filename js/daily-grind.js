@@ -28,27 +28,21 @@ day- day of the week
 let myDate = new Date();
 let myDay = myDate.getDay();
 let coffee = "";
-let today ="";
+let today = "";
 
+// Define URL parameters for query string handling
+const urlParams = new URLSearchParams(window.location.search);
 
-if(urlParams.has("day")){//from querystring
-    myDay = urlParams.get("day");
- }
+if(urlParams.has("day")) {
+    myDay = parseInt(urlParams.get("day"));
+} else {
+    myDay = myDate.getDay();  // Fallback to current day if no day parameter is passed
+}
 
-// Here's how we convert a string to an integer:
-
-myDay = parseInt(myDay);//must change to integer for switch
-
-
-//Here's a website where this is discussed: Mozilla Developer Network on parseInt()
-
-
-switch(myDay){
-
-    case 0:
+// Switch based on the day of the week
+     switch(myDay) {
+      case 0:
         today = "Sunday";  
-
-
         coffee = {
             name: "Caramel Latte", 
             pic: "images/caramel-latte.jpg",
@@ -57,12 +51,10 @@ switch(myDay){
             day: "Sunday", 
             desc: `For when I want something sweet`
         };
+        break; 
 
-    break; 
-
-    case 1:
+        case 1:
         today = "Monday";  
-
         coffee = {
             name: "Cold Brew", 
             pic: "images/cold-brew.jpg",
@@ -71,12 +63,10 @@ switch(myDay){
             day: "Monday", 
             desc: `For when I need a quick pick me up!`
         };
-    break; 
+        break; 
 
-     case 2:
+        case 2:
         today = "Tuesday";  
-
-
         coffee = {
             name: "Drip", 
             pic: "images/drip.jpg",
@@ -85,11 +75,10 @@ switch(myDay){
             day: "Tuesday", 
             desc: `For when I need sauce!`
         };
-    break; 
+        break; 
 
-    case 3:
+         case 3:
         today = "Wednesday";  
-
         coffee = {
             name: "Bubble Tea", 
             pic: "images/bubble-tea.jpg",
@@ -98,11 +87,10 @@ switch(myDay){
             day: "Wednesday", 
             desc: `I like me some bubble tea!`
         };
-    break; 
+        break; 
 
-    case 4:
+        case 4:
         today = "Thursday";  
-
         coffee = {
             name: "Frappaccino", 
             pic: "images/frappaccino.jpg",
@@ -111,11 +99,10 @@ switch(myDay){
             day: "Thursday", 
             desc: `I like me some whip cream on top!`
         };
-    break; 
+        break; 
 
-    case 5:
+        case 5:
         today = "Friday";  
-
         coffee = {
             name: "Mocha", 
             pic: "images/mocha.jpg",
@@ -124,11 +111,10 @@ switch(myDay){
             day: "Friday", 
             desc: `I like a cup of mocha!`
         };
-    break;
-    
-    case 6:
-        today = "Saturday";  
+        break;
 
+        case 6:
+        today = "Saturday";  
         coffee = {
             name: "Latte", 
             pic: "images/latte.jpg",
@@ -137,23 +123,32 @@ switch(myDay){
             day: "Saturday", 
             desc: `I like a small cup of latte!`
         };
-    break; 
+        break; 
     
-    default:
-       today = "Something went wrong";
+        default:
+        today = "Something went wrong";
+        coffee = {
+           name: "Unknown", 
+           pic: "images/unknown.jpg",
+           alt: "A mysterious unknown coffee", 
+           color: "gray",
+           day: "Unknown", 
+           desc: `Something went wrong.`
+       };
+        }
 
-}
+         console.log(coffee);
 
-//alert(today);
-console.log(coffee);
+        document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
 
-document.getElementById("coffee-cup").innerHTML = coffeeTemplate(coffee);
+        // Set background color of the page
+         document.querySelector("html").style.backgroundColor = coffee.color;
 
-
-document.querySelector("html").style.backgroundColor = coffee.color;
-
-function coffeeTemplate(coffee){
-    return `       <p>
-    		 <img src="${coffee.pic}" alt="${coffee.alt}" id="coffee" />
-            <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>, ${coffee.desc}</p>`;
+        function coffeeTemplate(coffee) {
+         return `       
+          <p>
+            <img src="${coffee.pic}" alt="${coffee.alt}" id="coffee" />
+            <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is 
+            <strong class="feature">${coffee.name}</strong>, ${coffee.desc}
+        </p>`;
 }
